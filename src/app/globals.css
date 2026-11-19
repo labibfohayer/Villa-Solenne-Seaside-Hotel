@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Palette: Riviera Plum */
+  --background: #f3f3ec;
+  --foreground: #17233b;
+  --card: #eae8dd;
+  --card-foreground: #17233b;
+  --primary: #340c24;
+  --primary-foreground: #f3f3ec;
+  --secondary: #b5cedb;
+  --secondary-foreground: #17233b;
+  --muted: #eae8dd;
+  --muted-foreground: #3f4a5e;
+  --accent: #b5cedb;
+  --accent-foreground: #17233b;
+  --deep: #340c24;
+  --deep-foreground: #f3f3ec;
+  --border: #c9c8bc;
+  --ring: #17233b;
+
+  /* Fonts & Fallback Stacks matching Original */
+  --font-body: var(--font-body-variable, "Archivo"), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-heading-variable, "Instrument Serif"), "Bodoni 72", Didot, Georgia, serif;
+  --font-label: var(--font-body-variable, "Archivo"), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-script: var(--font-script-variable, "Pinyon Script"), "Snell Roundhand", cursive;
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+  --font-mono: var(--font-label);
+
+  /* Typography Scales */
+  --text-display: clamp(3.75rem, 1.2rem + 10.6vw, 11rem);
+  --text-h1: clamp(3rem, 1rem + 7.2vw, 7.5rem);
+  --text-h2: clamp(1.875rem, 1.3rem + 2.6vw, 3.5rem);
+  --text-h3: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  --text-body: 1rem;
+  --text-body-lg: clamp(1.0625rem, 1rem + .25vw, 1.25rem);
+  --text-small: .875rem;
+  --text-label: .75rem;
+
+  /* Spacing */
+  --container: min(92vw, 84rem);
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --gap: clamp(1.25rem, 2.5vw, 2rem);
+  --section-space: clamp(4.5rem, 10vw, 9rem);
+  --label-tracking: .2em;
+  --label-case: uppercase;
+  --heading-tracking: -.02em;
+  --heading-leading: .88;
+  --heading-weight: 400;
+
+  /* Radii */
+  --radius: 0rem;
+  --radius-card: 0rem;
+  --radius-image: 0rem;
+  --radius-button: 999px;
+
+  /* Motion */
+  --dur-fast: 0.4s;
+  --dur-base: 0.8s;
+  --dur-slow: 1.2s;
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base custom interactive classes matching original */
+.btn-secondary {
+  display: inline-flex;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: var(--text-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--label-tracking);
+  transition: opacity 300ms ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  opacity: 0.7;
+}
+
+.btn-link {
+  font-size: var(--text-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--label-tracking);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  opacity: 0.75;
+  transition: opacity 300ms ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  opacity: 1;
+}
+
+/* Lenis smooth scroll recommended rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

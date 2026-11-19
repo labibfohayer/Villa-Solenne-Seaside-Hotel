@@ -1,0 +1,841 @@
+{
+  "title": "Era",
+  "description": "Sunny, theatrical resort-poster page in the style of era-residence.com: three flat colours (a deep plum, a powder blue, a warm cream) alternate with full-bleed photos, every title is a condensed high-contrast serif in giant uppercase with one looping script word laid across it, body and tiny tracked caps labels in a wide grotesk, square-cornered framed photos, thin vertical hairlines that draw down under each centred header, and thin ring circle buttons. The opening is the signature and lives inside HeroArchPoster (about 2.8 s, no separate loader): on the hero's own plum ground, inside a thin rounded frame, a small wordmark with its script word, spaced side words, a flower mark and a faint giant script watermark rise in letter by letter while a hairline fills down, then an arch window with a thin outer ring rises from below over them showing the hero photo and dives open past the screen while the hero title rises inside it, so the opening becomes the hero; the nav fades in last. Sections then arrive as shapes sliding over held photos, in the original's order: NavbarSealCorner \u2192 HeroArchPoster (photo dives as the arch arrives) \u2192 AboutArchCurve (blue semicircle with a curved title, then the location with a small framed slider) \u2192 TestimonialPhotoQuote (quotes passing over a held photo) \u2192 StatementPlusConcept (cream statement sliding over it) \u2192 ProcessRouteLine (pinned photo per place, the first opening from an arch and each next wiping up, one giant centred caps place with its travel time) \u2192 PricingFramedSlider (chamfered blue panel rising over the last place photo with the residences slider) \u2192 ServicesNightList (stacked names with a hairline marker over a pinned night photo, the active one's statement changing bottom left) \u2192 GalleryWindowMerge (two windows merge into one picture, giant word, framed slider) \u2192 CtaPosterPhoto (held sea-view poster) \u2192 FooterPlumPhone (plum panel with a giant phone number slides over). Companions: MetricsPlusCount, TeamFramedPortraits, FaqPlusAccordion, ContactPlumForm. Motion vocabulary (every section takes its move from these, nothing else): (1) the arch window, a round-topped opening that rises and widens past the frame with scroll to reveal a photo (opening, first process photo, gallery slider, team portraits, contact photo); (2) masked caps rise, caps lines rising out of masks with the script word drawn in left to right (every title, FAQ questions, team names, metrics lines, the process places, the night amenities); (3) the slide-over, a flat or shaped panel rising over a held photo (arch, straight edge, chamfer, plum footer); (4) the hairline draw, vertical hairlines, ring buttons and FAQ rules drawing on; (5) the settle, photos settling from 1.15x and drifting with scroll. Eases: in-out 0.75,0,0.25,1, out 0.25,1,0.5,1, dive 0.6,0,0,1; durations 0.4, 0.8, 1.2 s. Recurring subject: the white villa with its pool, from the hero to the rooms, the gallery and the closing poster.",
+  "accent": [
+    {
+      "var": "--accent",
+      "on": "--accent-foreground"
+    }
+  ],
+  "fitFor": "suits boutique hotels and resorts, holiday villas and rentals, wedding and event venues, beach clubs, restaurants and wine bars, spas, aesthetic clinics and real estate developments with a warm, glamorous brand and good photography; not B2B software, trades, finance or anything that should look sober",
+  "photoAppetite": "high",
+  "colourRoles": {
+    "--background": {
+      "l": [
+        0.93,
+        0.98
+      ],
+      "c": [
+        0,
+        0.03
+      ]
+    },
+    "--foreground": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0,
+        0.08
+      ]
+    },
+    "--card": {
+      "l": [
+        0.88,
+        0.95
+      ],
+      "c": [
+        0,
+        0.04
+      ]
+    },
+    "--card-foreground": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0,
+        0.08
+      ]
+    },
+    "--primary": {
+      "l": [
+        0.15,
+        0.35
+      ],
+      "c": [
+        0.03,
+        0.14
+      ]
+    },
+    "--primary-foreground": {
+      "l": [
+        0.93,
+        1
+      ],
+      "c": [
+        0,
+        0.03
+      ]
+    },
+    "--secondary": {
+      "l": [
+        0.75,
+        0.9
+      ],
+      "c": [
+        0.02,
+        0.1
+      ]
+    },
+    "--secondary-foreground": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0,
+        0.08
+      ]
+    },
+    "--muted": {
+      "l": [
+        0.88,
+        0.95
+      ],
+      "c": [
+        0,
+        0.04
+      ]
+    },
+    "--muted-foreground": {
+      "l": [
+        0.3,
+        0.45
+      ],
+      "c": [
+        0,
+        0.06
+      ]
+    },
+    "--accent": {
+      "l": [
+        0.75,
+        0.9
+      ],
+      "c": [
+        0.02,
+        0.12
+      ]
+    },
+    "--accent-foreground": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0,
+        0.08
+      ]
+    },
+    "--deep": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0.03,
+        0.14
+      ]
+    },
+    "--deep-foreground": {
+      "l": [
+        0.93,
+        1
+      ],
+      "c": [
+        0,
+        0.03
+      ]
+    },
+    "--border": {
+      "l": [
+        0.75,
+        0.88
+      ],
+      "c": [
+        0,
+        0.04
+      ]
+    },
+    "--ring": {
+      "l": [
+        0.15,
+        0.32
+      ],
+      "c": [
+        0,
+        0.08
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "text": "--foreground",
+      "on": "--background"
+    },
+    {
+      "text": "--foreground",
+      "on": "--secondary"
+    },
+    {
+      "text": "--foreground",
+      "on": "--card"
+    },
+    {
+      "text": "--muted-foreground",
+      "on": "--background"
+    },
+    {
+      "text": "--muted-foreground",
+      "on": "--card"
+    },
+    {
+      "text": "--muted-foreground",
+      "on": "--secondary"
+    },
+    {
+      "text": "--card-foreground",
+      "on": "--card"
+    },
+    {
+      "text": "--secondary-foreground",
+      "on": "--secondary"
+    },
+    {
+      "text": "--primary-foreground",
+      "on": "--primary"
+    },
+    {
+      "text": "--accent-foreground",
+      "on": "--accent"
+    },
+    {
+      "text": "--deep-foreground",
+      "on": "--deep"
+    }
+  ],
+  "palettes": [
+    {
+      "name": "Riviera Plum",
+      "mode": "light",
+      "vars": {
+        "--background": "#f3f3ec",
+        "--foreground": "#17233b",
+        "--card": "#eae8dd",
+        "--card-foreground": "#17233b",
+        "--primary": "#340c24",
+        "--primary-foreground": "#f3f3ec",
+        "--secondary": "#b5cedb",
+        "--secondary-foreground": "#17233b",
+        "--muted": "#eae8dd",
+        "--muted-foreground": "#3f4a5e",
+        "--accent": "#b5cedb",
+        "--accent-foreground": "#17233b",
+        "--deep": "#340c24",
+        "--deep-foreground": "#f3f3ec",
+        "--border": "#c9c8bc",
+        "--ring": "#17233b"
+      }
+    },
+    {
+      "name": "Night Pool",
+      "mode": "dark",
+      "vars": {
+        "--background": "#1a0c16",
+        "--foreground": "#f1ece3",
+        "--card": "#26141f",
+        "--card-foreground": "#f1ece3",
+        "--primary": "#e8c9d6",
+        "--primary-foreground": "#1a0c16",
+        "--secondary": "#1d2c38",
+        "--secondary-foreground": "#f1ece3",
+        "--muted": "#26141f",
+        "--muted-foreground": "#bfb3ba",
+        "--accent": "#9fc0d1",
+        "--accent-foreground": "#1a0c16",
+        "--deep": "#0f070d",
+        "--deep-foreground": "#f1ece3",
+        "--border": "#3d2a36",
+        "--ring": "#f1ece3"
+      }
+    },
+    {
+      "name": "Amalfi Lemon",
+      "mode": "light",
+      "vars": {
+        "--background": "#f6f3e8",
+        "--foreground": "#1d2a3a",
+        "--card": "#ede7d6",
+        "--card-foreground": "#1d2a3a",
+        "--primary": "#1e3a5c",
+        "--primary-foreground": "#f6f3e8",
+        "--secondary": "#f1dc8f",
+        "--secondary-foreground": "#1d2a3a",
+        "--muted": "#ede7d6",
+        "--muted-foreground": "#45505f",
+        "--accent": "#f1dc8f",
+        "--accent-foreground": "#1d2a3a",
+        "--deep": "#1e3a5c",
+        "--deep-foreground": "#f6f3e8",
+        "--border": "#d3cbb5",
+        "--ring": "#1d2a3a"
+      }
+    },
+    {
+      "name": "Terracotta Rose",
+      "mode": "light",
+      "vars": {
+        "--background": "#f6efe9",
+        "--foreground": "#2b1b1a",
+        "--card": "#eee3d9",
+        "--card-foreground": "#2b1b1a",
+        "--primary": "#5a2318",
+        "--primary-foreground": "#f6efe9",
+        "--secondary": "#e9b9a7",
+        "--secondary-foreground": "#2b1b1a",
+        "--muted": "#eee3d9",
+        "--muted-foreground": "#5a4643",
+        "--accent": "#e9b9a7",
+        "--accent-foreground": "#2b1b1a",
+        "--deep": "#5a2318",
+        "--deep-foreground": "#f6efe9",
+        "--border": "#d6c6b9",
+        "--ring": "#2b1b1a"
+      }
+    },
+    {
+      "name": "Emerald Blush",
+      "mode": "light",
+      "vars": {
+        "--background": "#f5f0ec",
+        "--foreground": "#13261f",
+        "--card": "#ece4dc",
+        "--card-foreground": "#13261f",
+        "--primary": "#0f3b2e",
+        "--primary-foreground": "#f5f0ec",
+        "--secondary": "#edc4c8",
+        "--secondary-foreground": "#13261f",
+        "--muted": "#ece4dc",
+        "--muted-foreground": "#3e4f48",
+        "--accent": "#edc4c8",
+        "--accent-foreground": "#13261f",
+        "--deep": "#0f3b2e",
+        "--deep-foreground": "#f5f0ec",
+        "--border": "#d5c9be",
+        "--ring": "#13261f"
+      }
+    },
+    {
+      "name": "Olive Grove",
+      "mode": "light",
+      "vars": {
+        "--background": "#f3f2ea",
+        "--foreground": "#1f2619",
+        "--card": "#e9e7da",
+        "--card-foreground": "#1f2619",
+        "--primary": "#2f3a1e",
+        "--primary-foreground": "#f3f2ea",
+        "--secondary": "#c9d3a8",
+        "--secondary-foreground": "#1f2619",
+        "--muted": "#e9e7da",
+        "--muted-foreground": "#4a5341",
+        "--accent": "#c9d3a8",
+        "--accent-foreground": "#1f2619",
+        "--deep": "#2f3a1e",
+        "--deep-foreground": "#f3f2ea",
+        "--border": "#ccc9b8",
+        "--ring": "#1f2619"
+      }
+    },
+    {
+      "name": "Indigo Lilac",
+      "mode": "light",
+      "vars": {
+        "--background": "#f4f2f0",
+        "--foreground": "#1b1b3a",
+        "--card": "#ebe7e3",
+        "--card-foreground": "#1b1b3a",
+        "--primary": "#22224a",
+        "--primary-foreground": "#f4f2f0",
+        "--secondary": "#cdc3e8",
+        "--secondary-foreground": "#1b1b3a",
+        "--muted": "#ebe7e3",
+        "--muted-foreground": "#46465e",
+        "--accent": "#cdc3e8",
+        "--accent-foreground": "#1b1b3a",
+        "--deep": "#22224a",
+        "--deep-foreground": "#f4f2f0",
+        "--border": "#d0cbc6",
+        "--ring": "#1b1b3a"
+      }
+    },
+    {
+      "name": "Night Lemon",
+      "mode": "dark",
+      "vars": {
+        "--background": "#0f1a2a",
+        "--foreground": "#f3eedf",
+        "--card": "#172438",
+        "--card-foreground": "#f3eedf",
+        "--primary": "#c9d6e8",
+        "--primary-foreground": "#0f1a2a",
+        "--secondary": "#2a2614",
+        "--secondary-foreground": "#f3eedf",
+        "--muted": "#172438",
+        "--muted-foreground": "#b3b8c0",
+        "--accent": "#f1dc8f",
+        "--accent-foreground": "#0f1a2a",
+        "--deep": "#08101c",
+        "--deep-foreground": "#f3eedf",
+        "--border": "#2a3850",
+        "--ring": "#f3eedf"
+      }
+    },
+    {
+      "name": "Night Terracotta",
+      "mode": "dark",
+      "vars": {
+        "--background": "#1e100c",
+        "--foreground": "#f5ece4",
+        "--card": "#2b1914",
+        "--card-foreground": "#f5ece4",
+        "--primary": "#f2d4c8",
+        "--primary-foreground": "#1e100c",
+        "--secondary": "#1f2a2a",
+        "--secondary-foreground": "#f5ece4",
+        "--muted": "#2b1914",
+        "--muted-foreground": "#c4b2aa",
+        "--accent": "#e9b9a7",
+        "--accent-foreground": "#1e100c",
+        "--deep": "#120906",
+        "--deep-foreground": "#f5ece4",
+        "--border": "#432a22",
+        "--ring": "#f5ece4"
+      }
+    },
+    {
+      "name": "Night Emerald",
+      "mode": "dark",
+      "vars": {
+        "--background": "#0b1a15",
+        "--foreground": "#f2ece4",
+        "--card": "#13261f",
+        "--card-foreground": "#f2ece4",
+        "--primary": "#c8e0d2",
+        "--primary-foreground": "#0b1a15",
+        "--secondary": "#2a1a20",
+        "--secondary-foreground": "#f2ece4",
+        "--muted": "#13261f",
+        "--muted-foreground": "#b0bdb6",
+        "--accent": "#edc4c8",
+        "--accent-foreground": "#0b1a15",
+        "--deep": "#06100c",
+        "--deep-foreground": "#f2ece4",
+        "--border": "#24392f",
+        "--ring": "#f2ece4"
+      }
+    },
+    {
+      "name": "Night Olive",
+      "mode": "dark",
+      "vars": {
+        "--background": "#13170d",
+        "--foreground": "#f1efe3",
+        "--card": "#1c2214",
+        "--card-foreground": "#f1efe3",
+        "--primary": "#dfe6c4",
+        "--primary-foreground": "#13170d",
+        "--secondary": "#2a2418",
+        "--secondary-foreground": "#f1efe3",
+        "--muted": "#1c2214",
+        "--muted-foreground": "#b5b8a6",
+        "--accent": "#c9d3a8",
+        "--accent-foreground": "#13170d",
+        "--deep": "#0a0d06",
+        "--deep-foreground": "#f1efe3",
+        "--border": "#313a24",
+        "--ring": "#f1efe3"
+      }
+    },
+    {
+      "name": "Night Indigo",
+      "mode": "dark",
+      "vars": {
+        "--background": "#10102a",
+        "--foreground": "#f2eff3",
+        "--card": "#1a1a3a",
+        "--card-foreground": "#f2eff3",
+        "--primary": "#d6d3f0",
+        "--primary-foreground": "#10102a",
+        "--secondary": "#2a1830",
+        "--secondary-foreground": "#f2eff3",
+        "--muted": "#1a1a3a",
+        "--muted-foreground": "#b4b2c6",
+        "--accent": "#cdc3e8",
+        "--accent-foreground": "#10102a",
+        "--deep": "#08081a",
+        "--deep-foreground": "#f2eff3",
+        "--border": "#2c2c50",
+        "--ring": "#f2eff3"
+      }
+    }
+  ],
+  "editorPalettes": [
+    {
+      "name": "Coral Sea",
+      "mode": "light",
+      "vars": {
+        "--background": "#f4f1ea",
+        "--foreground": "#10282f",
+        "--card": "#eae5d9",
+        "--card-foreground": "#10282f",
+        "--primary": "#0e3a46",
+        "--primary-foreground": "#f4f1ea",
+        "--secondary": "#f2bfab",
+        "--secondary-foreground": "#10282f",
+        "--muted": "#eae5d9",
+        "--muted-foreground": "#3c5157",
+        "--accent": "#f2bfab",
+        "--accent-foreground": "#10282f",
+        "--deep": "#0e3a46",
+        "--deep-foreground": "#f4f1ea",
+        "--border": "#cfc8b8",
+        "--ring": "#10282f"
+      }
+    },
+    {
+      "name": "Mauve Sand",
+      "mode": "light",
+      "vars": {
+        "--background": "#f4efe8",
+        "--foreground": "#2a1e26",
+        "--card": "#ebe3d8",
+        "--card-foreground": "#2a1e26",
+        "--primary": "#5b3550",
+        "--primary-foreground": "#f4efe8",
+        "--secondary": "#e3cfae",
+        "--secondary-foreground": "#2a1e26",
+        "--muted": "#ebe3d8",
+        "--muted-foreground": "#574850",
+        "--accent": "#e3cfae",
+        "--accent-foreground": "#2a1e26",
+        "--deep": "#5b3550",
+        "--deep-foreground": "#f4efe8",
+        "--border": "#d4c8ba",
+        "--ring": "#2a1e26"
+      }
+    },
+    {
+      "name": "Night Coral",
+      "mode": "dark",
+      "vars": {
+        "--background": "#0b1d22",
+        "--foreground": "#f3ece4",
+        "--card": "#12292f",
+        "--card-foreground": "#f3ece4",
+        "--primary": "#f2cdbf",
+        "--primary-foreground": "#0b1d22",
+        "--secondary": "#2a1a18",
+        "--secondary-foreground": "#f3ece4",
+        "--muted": "#12292f",
+        "--muted-foreground": "#b2bcbd",
+        "--accent": "#f2bfab",
+        "--accent-foreground": "#0b1d22",
+        "--deep": "#061114",
+        "--deep-foreground": "#f3ece4",
+        "--border": "#23404a",
+        "--ring": "#f3ece4"
+      }
+    },
+    {
+      "name": "Night Sand",
+      "mode": "dark",
+      "vars": {
+        "--background": "#1a1712",
+        "--foreground": "#f3ece0",
+        "--card": "#262119",
+        "--card-foreground": "#f3ece0",
+        "--primary": "#ead9bd",
+        "--primary-foreground": "#1a1712",
+        "--secondary": "#1d2a30",
+        "--secondary-foreground": "#f3ece0",
+        "--muted": "#262119",
+        "--muted-foreground": "#bdb4a6",
+        "--accent": "#e3cfae",
+        "--accent-foreground": "#1a1712",
+        "--deep": "#0e0c09",
+        "--deep-foreground": "#f3ece0",
+        "--border": "#3b3428",
+        "--ring": "#f3ece0"
+      }
+    },
+    {
+      "name": "Ochre Slate",
+      "mode": "light",
+      "vars": {
+        "--background": "#f4f2ec",
+        "--foreground": "#1c212b",
+        "--card": "#ebe7dc",
+        "--card-foreground": "#1c212b",
+        "--primary": "#2e3440",
+        "--primary-foreground": "#f4f2ec",
+        "--secondary": "#e6c27e",
+        "--secondary-foreground": "#1c212b",
+        "--muted": "#ebe7dc",
+        "--muted-foreground": "#474d58",
+        "--accent": "#e6c27e",
+        "--accent-foreground": "#1c212b",
+        "--deep": "#2e3440",
+        "--deep-foreground": "#f4f2ec",
+        "--border": "#d2cdbf",
+        "--ring": "#1c212b"
+      }
+    },
+    {
+      "name": "Pistachio Cocoa",
+      "mode": "light",
+      "vars": {
+        "--background": "#f5f2ea",
+        "--foreground": "#2a1a12",
+        "--card": "#ece6d9",
+        "--card-foreground": "#2a1a12",
+        "--primary": "#3b2418",
+        "--primary-foreground": "#f5f2ea",
+        "--secondary": "#cfe0b4",
+        "--secondary-foreground": "#2a1a12",
+        "--muted": "#ece6d9",
+        "--muted-foreground": "#59473d",
+        "--accent": "#cfe0b4",
+        "--accent-foreground": "#2a1a12",
+        "--deep": "#3b2418",
+        "--deep-foreground": "#f5f2ea",
+        "--border": "#d6cebd",
+        "--ring": "#2a1a12"
+      }
+    },
+    {
+      "name": "Night Ochre",
+      "mode": "dark",
+      "vars": {
+        "--background": "#12161e",
+        "--foreground": "#f2ede2",
+        "--card": "#1b202b",
+        "--card-foreground": "#f2ede2",
+        "--primary": "#ecd3a2",
+        "--primary-foreground": "#12161e",
+        "--secondary": "#2a2116",
+        "--secondary-foreground": "#f2ede2",
+        "--muted": "#1b202b",
+        "--muted-foreground": "#b3b4b4",
+        "--accent": "#e6c27e",
+        "--accent-foreground": "#12161e",
+        "--deep": "#090b10",
+        "--deep-foreground": "#f2ede2",
+        "--border": "#2e3542",
+        "--ring": "#f2ede2"
+      }
+    },
+    {
+      "name": "Night Pistachio",
+      "mode": "dark",
+      "vars": {
+        "--background": "#1a120d",
+        "--foreground": "#f1ebdf",
+        "--card": "#261b14",
+        "--card-foreground": "#f1ebdf",
+        "--primary": "#d9e8c2",
+        "--primary-foreground": "#1a120d",
+        "--secondary": "#1c2617",
+        "--secondary-foreground": "#f1ebdf",
+        "--muted": "#261b14",
+        "--muted-foreground": "#bdb2a6",
+        "--accent": "#cfe0b4",
+        "--accent-foreground": "#1a120d",
+        "--deep": "#0e0906",
+        "--deep-foreground": "#f1ebdf",
+        "--border": "#3d2f25",
+        "--ring": "#f1ebdf"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "key": "riviera",
+      "name": "Riviera",
+      "palette": "Riviera Plum",
+      "fonts": {
+        "heading": "Instrument Serif",
+        "body": "Archivo"
+      }
+    },
+    {
+      "key": "amalfi",
+      "name": "Amalfi",
+      "palette": "Amalfi Lemon",
+      "fonts": {
+        "heading": "Playfair Display",
+        "body": "Karla"
+      }
+    },
+    {
+      "key": "coral-sea",
+      "name": "Coral Sea",
+      "palette": "Coral Sea",
+      "fonts": {
+        "heading": "Cormorant Garamond",
+        "body": "Manrope"
+      }
+    },
+    {
+      "key": "mauve",
+      "name": "Mauve",
+      "palette": "Mauve Sand",
+      "fonts": {
+        "heading": "Fraunces",
+        "body": "Work Sans"
+      }
+    },
+    {
+      "key": "night-pool",
+      "name": "Night Pool",
+      "palette": "Night Pool",
+      "fonts": {
+        "heading": "DM Serif Display",
+        "body": "Inter Tight"
+      }
+    },
+    {
+      "key": "ochre",
+      "name": "Ochre",
+      "palette": "Ochre Slate",
+      "fonts": {
+        "heading": "Libre Caslon Display",
+        "body": "Inter"
+      }
+    },
+    {
+      "key": "pistachio",
+      "name": "Pistachio",
+      "palette": "Pistachio Cocoa",
+      "fonts": {
+        "heading": "Young Serif",
+        "body": "Figtree"
+      }
+    },
+    {
+      "key": "terracotta",
+      "name": "Terracotta",
+      "palette": "Terracotta Rose",
+      "fonts": {
+        "heading": "Newsreader",
+        "body": "DM Sans"
+      }
+    },
+    {
+      "key": "lilac",
+      "name": "Lilac",
+      "palette": "Indigo Lilac",
+      "fonts": {
+        "heading": "Bodoni Moda",
+        "body": "Karla"
+      }
+    },
+    {
+      "key": "lamplight",
+      "name": "Lamplight",
+      "palette": "Night Ochre",
+      "fonts": {
+        "heading": "Gloock",
+        "body": "Manrope"
+      }
+    },
+    {
+      "key": "olive-grove",
+      "name": "Olive Grove",
+      "palette": "Olive Grove",
+      "fonts": {
+        "heading": "EB Garamond",
+        "body": "Plus Jakarta Sans"
+      }
+    },
+    {
+      "key": "verde-night",
+      "name": "Verde Night",
+      "palette": "Night Emerald",
+      "fonts": {
+        "heading": "Prata",
+        "body": "Inter Tight"
+      }
+    }
+  ],
+  "styleOptions": {
+    "button": [
+      "outline",
+      "solid",
+      "square"
+    ],
+    "card": [
+      "frame",
+      "filled",
+      "deep"
+    ],
+    "pattern": [
+      "none",
+      "plus",
+      "hairlines"
+    ]
+  },
+  "brand": {
+    "role": "--deep",
+    "l": [
+      0.15,
+      0.32
+    ],
+    "c": [
+      0.03,
+      0.14
+    ]
+  },
+  "sections": [
+    {
+      "component": "HeroArchPoster",
+      "category": "hero"
+    },
+    {
+      "component": "AboutArchCurve",
+      "category": "about"
+    },
+    {
+      "component": "TestimonialPhotoQuote",
+      "category": "testimonial"
+    },
+    {
+      "component": "StatementPlusConcept",
+      "category": "statement"
+    },
+    {
+      "component": "ProcessRouteLine",
+      "category": "features"
+    },
+    {
+      "component": "PricingFramedSlider",
+      "category": "pricing"
+    },
+    {
+      "component": "ServicesNightList",
+      "category": "features"
+    },
+    {
+      "component": "GalleryWindowMerge",
+      "category": "gallery"
+    },
+    {
+      "component": "CtaPosterPhoto",
+      "category": "statement"
+    }
+  ],
+  "footer": "FooterPlumPhone"
+}
