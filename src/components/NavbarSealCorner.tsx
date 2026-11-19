@@ -211,7 +211,7 @@ export default function NavbarSealCorner({
                       ease: EASE_OUT,
                       delay: 0.3 + idx * 0.06,
                     }}
-                    className="block font-heading text-[length:var(--text-h1)] uppercase leading-[0.9] tracking-[-0.02em] [overflow-wrap:anywhere]"
+                    className="block [font-family:var(--font-heading)] text-[length:var(--text-h1)] uppercase leading-[0.9] tracking-[-0.02em] [overflow-wrap:anywhere]"
                   >
                     {item.name}
                   </motion.a>

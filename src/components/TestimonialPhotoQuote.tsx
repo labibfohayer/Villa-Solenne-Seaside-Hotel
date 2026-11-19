@@ -38,7 +38,7 @@ function QuoteCard({ item, reduce }: { item: TestimonialItem; reduce?: boolean |
         </svg>
 
         <blockquote className="max-w-[48rem]">
-          <p className="font-heading text-[length:var(--text-h2)] uppercase leading-[1] tracking-[var(--heading-tracking)] text-balance [overflow-wrap:anywhere]">
+          <p className="[font-family:var(--font-heading)] text-[length:var(--text-h2)] uppercase leading-[1] tracking-[var(--heading-tracking)] text-balance [overflow-wrap:anywhere]">
             {item.quote}
           </p>
         </blockquote>

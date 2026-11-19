@@ -39,10 +39,10 @@ const config: Config = {
         ring: "var(--ring)",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Instrument Serif", "Bodoni 72", "Didot", "Georgia", "serif"],
-        body: ["var(--font-body)", "Archivo", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        script: ["var(--font-script)", "Pinyon Script", "Snell Roundhand", "cursive"],
-        sans: ["var(--font-sans)", "Archivo", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)"],
+        script: ["var(--font-script)"],
+        sans: ["var(--font-sans)"],
       },
       keyframes: {
         "marquee-horizontal": {

@@ -217,7 +217,7 @@ export default function HeroArchPoster({
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.05 }}
               transition={{ duration: 1, delay: introDelay + 0.5 }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 whitespace-nowrap font-script text-[38vw] leading-none normal-case"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 whitespace-nowrap [font-family:var(--font-script)] text-[38vw] leading-none normal-case"
             >
               {script}
             </motion.p>
@@ -243,7 +243,7 @@ export default function HeroArchPoster({
               <div className="relative flex flex-col items-center">
                 <div
                   style={fitStyles}
-                  className="w-min text-center font-heading text-[length:min(clamp(1.625rem,4.4vw,4rem),var(--fit))] uppercase leading-[0.86] tracking-[-0.02em]"
+                  className="w-min text-center [font-family:var(--font-heading)] text-[length:min(clamp(1.625rem,4.4vw,4rem),var(--fit))] uppercase leading-[0.86] tracking-[-0.02em]"
                 >
                   {words.flatMap((word, idx) => [
                     <div
@@ -265,7 +265,7 @@ export default function HeroArchPoster({
                       ease: EASE_IN_OUT,
                       delay: introDelay + 0.55,
                     }}
-                    className="mt-[0.1em] self-end -rotate-6 whitespace-nowrap font-script text-[clamp(1.5rem,2.6vw,2.4rem)] leading-none normal-case"
+                    className="mt-[0.1em] self-end -rotate-6 whitespace-nowrap [font-family:var(--font-script)] text-[clamp(1.5rem,2.6vw,2.4rem)] leading-none normal-case"
                   >
                     {script}
                   </motion.p>
@@ -385,7 +385,7 @@ export default function HeroArchPoster({
                     ease: "easeOut",
                     delay: titleStartDelay + 0.3,
                   }}
-                  className="font-heading text-[length:6vw] uppercase leading-none lg:text-[clamp(1rem,1.5vw,1.375rem)]"
+                  className="[font-family:var(--font-heading)] text-[length:6vw] uppercase leading-none lg:text-[clamp(1rem,1.5vw,1.375rem)]"
                 >
                   {labelLeft}
                 </motion.p>
@@ -439,7 +439,7 @@ export default function HeroArchPoster({
                       ease: EASE_IN_OUT,
                       delay: scriptStartDelay,
                     }}
-                    className="pointer-events-none mt-[0.1em] self-end whitespace-nowrap font-script text-[length:12.5vw] leading-none normal-case -rotate-6 lg:text-[length:calc(var(--text-display)*0.5)]"
+                    className="pointer-events-none mt-[0.1em] self-end whitespace-nowrap [font-family:var(--font-script)] text-[length:12.5vw] leading-none normal-case -rotate-6 lg:text-[length:calc(var(--text-display)*0.5)]"
                   >
                     {script}
                   </motion.p>
@@ -456,7 +456,7 @@ export default function HeroArchPoster({
                     ease: "easeOut",
                     delay: titleStartDelay + 0.3,
                   }}
-                  className="font-heading text-[length:6vw] uppercase leading-none lg:text-[clamp(1rem,1.5vw,1.375rem)]"
+                  className="[font-family:var(--font-heading)] text-[length:6vw] uppercase leading-none lg:text-[clamp(1rem,1.5vw,1.375rem)]"
                 >
                   {labelRight}
                 </motion.p>

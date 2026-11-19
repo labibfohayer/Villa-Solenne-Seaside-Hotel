@@ -174,7 +174,7 @@ export default function ProcessRouteLine({
                     <div className="mt-[clamp(1.25rem,3svh,2rem)] overflow-hidden">
                       <motion.p
                         variants={wordVariants(0.2 + titleWords.length * 0.08)}
-                        className="font-body text-[length:var(--text-label)] font-semibold uppercase tracking-[var(--label-tracking)]"
+                        className="[font-family:var(--font-body)] text-[length:var(--text-label)] font-semibold uppercase tracking-[var(--label-tracking)]"
                       >
                         {currentItem.description}
                       </motion.p>

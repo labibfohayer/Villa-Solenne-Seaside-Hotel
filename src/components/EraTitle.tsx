@@ -160,7 +160,7 @@ export default function EraTitle({
           <motion.p
             aria-hidden={words.length ? true : undefined}
             className={clsx(
-              "pointer-events-none font-script text-[length:calc(var(--text-h1)*0.62)] leading-none tracking-normal normal-case",
+              "pointer-events-none [font-family:var(--font-script)] text-[length:calc(var(--text-h1)*0.62)] leading-none tracking-normal normal-case",
               words.length ? "ml-auto mt-[0.1em] w-max -rotate-6" : "relative",
               scriptClassName
             )}
