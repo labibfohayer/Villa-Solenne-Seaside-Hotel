@@ -41,8 +41,9 @@
   --text-label: .75rem;
 
   /* Spacing */
-  --container: min(92vw, 84rem);
-  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --max-w: 1280px;
+  --container: min(100% - 2 * var(--gutter), var(--max-w));
+  --gutter: clamp(1rem, .25rem + 3.2vw, 3rem);
   --gap: clamp(1.25rem, 2.5vw, 2rem);
   --section-space: clamp(4.5rem, 10vw, 9rem);
   --label-tracking: .2em;

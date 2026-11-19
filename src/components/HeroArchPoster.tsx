@@ -202,7 +202,7 @@ export default function HeroArchPoster({
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.5, delay: introDelay + TIME_RISE + 0.1 }}
-            className="pointer-events-none absolute inset-0"
+            className="pointer-events-none absolute inset-0 overflow-hidden"
           >
             {/* Border frame */}
             <motion.div
