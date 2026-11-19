@@ -1,15 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import clsx from "clsx";
 import DrawOnScroll from "./DrawOnScroll";
 import { EASE_OUT } from "@/lib/motion";
+import { useWordLines } from "@/lib/useWordLines";
 
 interface StatementProps {
   label?: string;
   title?: string;
   description?: string;
+  imageSrc?: string;
+  imageAlt?: string;
   className?: string;
   ariaLabel?: string;
 }
@@ -18,19 +21,23 @@ export default function StatementPlusConcept({
   label = "The villas",
   title = "Four modern villas in the olive hills, each with its own pool, terrace and view of the sea",
   description = "White walls, local stone and timber, built low into the hill so every room opens onto the garden and the light.",
+  imageSrc,
+  imageAlt = "",
   className,
   ariaLabel,
 }: StatementProps) {
   const shouldReduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
+  const wordsContainerRef = useRef<HTMLDivElement>(null);
 
-  // Four lines as laid out in the original template
-  const lines = [
-    "FOUR MODERN VILLAS IN THE",
-    "OLIVE HILLS, EACH WITH ITS",
-    "OWN POOL, TERRACE AND",
-    "VIEW OF THE SEA",
-  ];
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
+  const words = title ? title.split(/\s+/).filter(Boolean) : [];
+  const wordLines = useWordLines(wordsContainerRef, title);
 
   return (
     <section
@@ -41,6 +48,18 @@ export default function StatementPlusConcept({
         className
       )}
     >
+      {imageSrc && (
+        <motion.img
+          src={imageSrc}
+          alt={imageAlt}
+          aria-hidden={imageAlt === "" ? true : undefined}
+          loading="lazy"
+          decoding="async"
+          style={shouldReduceMotion ? undefined : { y: parallaxY }}
+          className="pointer-events-none absolute -left-[4vw] -top-[6%] w-[42vw] max-w-[34rem] object-contain lg:w-[28vw]"
+        />
+      )}
+
       <div className="relative mx-auto flex w-[var(--container)] flex-col items-center text-center">
         {/* Top Label */}
         {label && (
@@ -56,57 +75,62 @@ export default function StatementPlusConcept({
         )}
 
         {/* Display Heading with Superscript Plus Signs */}
-        <h2
-          aria-label={title}
-          className="mt-[clamp(1.5rem,3vw,2.5rem)] max-w-[10.5em] text-[length:clamp(2rem,1.2rem+2.9vw,3.5rem)] uppercase leading-[0.98] tracking-[-0.01em] [font-family:var(--font-heading)] [font-weight:var(--heading-weight)] [overflow-wrap:anywhere]"
-        >
-          <div aria-hidden="true" className="flex flex-col items-center">
-            {lines.map((line, lIdx) => {
-              const lineWords = line.split(" ");
-              return (
-                <div key={lIdx} className="flex flex-wrap items-center justify-center gap-x-[0.25em]">
-                  {lineWords.map((word, wIdx) => (
-                    <div
-                      key={wIdx}
-                      className="inline-block overflow-hidden pb-[0.08em] align-top"
-                    >
-                      <motion.div
-                        initial={shouldReduceMotion ? false : { y: "105%" }}
-                        whileInView={{ y: "0%" }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{
-                          duration: 1.2,
-                          ease: EASE_OUT,
-                          delay: (lIdx * 4 + wIdx) * 0.05,
-                        }}
-                        className="inline-block"
-                      >
+        {words.length > 0 && (
+          <h2
+            aria-label={title}
+            className="mt-[clamp(1.5rem,3vw,2.5rem)] max-w-[10.5em] text-[length:clamp(2rem,1.2rem+2.9vw,3.5rem)] uppercase leading-[0.98] tracking-[-0.01em] [font-family:var(--font-heading)] [font-weight:var(--heading-weight)] [overflow-wrap:anywhere]"
+          >
+            <motion.div
+              ref={wordsContainerRef}
+              aria-hidden="true"
+              initial={shouldReduceMotion ? false : "hidden"}
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              {words.flatMap((word, idx) => {
+                const lineIdx = wordLines[idx] ?? 0;
+                const wordVariants = {
+                  hidden: { y: "105%" },
+                  show: {
+                    y: "0%",
+                    transition: {
+                      duration: 1.2,
+                      ease: EASE_OUT,
+                      delay: lineIdx * 0.08,
+                    },
+                  },
+                };
+                const isEndOfLine =
+                  idx === words.length - 1 || (wordLines[idx + 1] ?? 0) !== lineIdx;
+
+                return [
+                  <div
+                    key={idx}
+                    data-word={true}
+                    className="relative inline-block align-top"
+                  >
+                    <div className="block overflow-hidden pb-[0.08em]">
+                      <motion.div variants={wordVariants} className="block">
                         {word}
                       </motion.div>
                     </div>
-                  ))}
-                  <div className="inline-block overflow-hidden pb-[0.08em] pl-[0.1em]">
-                    <motion.div
-                      initial={shouldReduceMotion ? false : { y: "105%" }}
-                      whileInView={{ y: "0%" }}
-                      viewport={{ once: true, amount: 0.5 }}
-                      transition={{
-                        duration: 1.2,
-                        ease: EASE_OUT,
-                        delay: (lIdx * 4 + lineWords.length) * 0.05,
-                      }}
-                      className="inline-block"
-                    >
-                      <sup className="align-[0.9em] text-[0.32em] leading-none font-bold">
-                        +
-                      </sup>
-                    </motion.div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </h2>
+
+                    {isEndOfLine && (
+                      <div className="absolute left-full top-0 overflow-hidden pb-[0.08em] pl-[0.15em]">
+                        <motion.div variants={wordVariants} className="block">
+                          <sup className="align-[0.9em] text-[0.32em] leading-none font-bold">
+                            +
+                          </sup>
+                        </motion.div>
+                      </div>
+                    )}
+                  </div>,
+                  idx < words.length - 1 ? " " : null,
+                ];
+              })}
+            </motion.div>
+          </h2>
+        )}
 
         {/* Description */}
         {description && (
