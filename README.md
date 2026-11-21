@@ -1,5 +1,7 @@
 # 🌊 Villa Solenne — Seaside Hotel (Pixel-Perfect Replica)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-villasolenne.pages.dev-success?style=for-the-badge&logo=cloudflare&logoColor=white)](https://villasolenne.pages.dev/)
+
 An exact, pixel-perfect reverse engineered replica of the **Seaside Hotel (Villa Solenne)** template from [webild.io](https://www.webild.io/templates/seaside-hotel). Built with **Next.js 15 (App Router)**, **Tailwind CSS**, **Framer Motion**, and **Lenis Smooth Scroll** in the signature **Riviera Plum** palette.
 
 ---
@@ -38,7 +40,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser for local development, or view the live production deployment at **[villasolenne.pages.dev](https://villasolenne.pages.dev/)**.
 
 ### Production Build
 
